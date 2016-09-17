@@ -13,7 +13,7 @@
       views: {
         'menuContent': {
           templateUrl: 'templates/friends.html',
-          controller: 'PlaylistsCtrl'
+          controller: 'PlaylistsCtrljkjk'
         }
       }
     })
