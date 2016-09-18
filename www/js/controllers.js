@@ -52,5 +52,19 @@ angular.module('starter.controllers', [])
   ];
 })
 
+
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+});
+
+app.controller('TabController', function(){
+  this.tab = 1;
+
+  this.setTab = function(selectedTab){
+    this.tab = selectedTab;
+  };
+
+  this.isSet = function(givenTab){
+    return this.tab === givenTab;
+  };
 });

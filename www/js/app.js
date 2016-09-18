@@ -58,7 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-  //error start
+  //added start
   .state('app.settings', {
       url: '/settings',
       views: {
@@ -79,7 +79,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  //error end
+  .state('app.friend-profile', {
+      url: '/friend',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/friend-profile.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+  //added end
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -90,5 +99,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('#');
+  $urlRouterProvider.otherwise('/app/playlists');
 });
